@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Togla.Data;
 
 namespace Togla.Web
 {
@@ -26,6 +28,14 @@ namespace Togla.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<ToglaDbContext>(opts => 
+            {
+                opts.EnableDetailedErrors();
+                opts.UseNpgsql(Configuration.GetConnectionString("togla.dev"));
+            });
+
+            //services.AddTransient<IStockService>
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
