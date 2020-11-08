@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Togla.Data\Togla.Data.csproj" />
+    <ProjectReference Include="..\Togla.Services\Togla.Services.csproj" />
   </ItemGroup>
 
 

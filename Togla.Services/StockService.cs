@@ -15,7 +15,7 @@ namespace Togla.Services
         /// </summary>
         public StockService(ToglaDbContext db) 
         {
-
+			_db = db;
         }
 
 		public void AddStock(Stock stock)
