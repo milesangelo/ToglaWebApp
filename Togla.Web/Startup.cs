@@ -34,8 +34,6 @@ namespace Togla.Web
                 opts.EnableDetailedErrors();
                 opts.UseNpgsql(Configuration.GetConnectionString("togla.dev"));
             });
-
-            //services.AddTransient<IStockService>
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
