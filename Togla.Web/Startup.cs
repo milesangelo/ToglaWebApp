@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Togla.Data;
+using Togla.Services;
 
 namespace Togla.Web
 {
@@ -27,6 +28,7 @@ namespace Togla.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddControllers();
 
             services.AddDbContext<ToglaDbContext>(opts => 
@@ -34,6 +36,8 @@ namespace Togla.Web
                 opts.EnableDetailedErrors();
                 opts.UseNpgsql(Configuration.GetConnectionString("togla.dev"));
             });
+
+            services.AddTransient<IStockService, StockService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +51,14 @@ namespace Togla.Web
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(builder => 
+            {
+                builder.WithOrigins("http://localhost:8080");
+                builder.AllowAnyMethod();
+                builder.AllowAnyHeader();
+            });
+            
 
             app.UseAuthorization();
 
