@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Togla.Data", "Togla.Data\Togla.Data.csproj", "{D42D8CF8-D591-4451-B12B-2D359F763F1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Togla.Data", "Togla.Data\Togla.Data.csproj", "{D42D8CF8-D591-4451-B12B-2D359F763F1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Togla.Web", "Togla.Web\Togla.Web.csproj", "{EE5A510A-9330-4A89-A0E4-6A280CF7B6AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Togla.Web", "Togla.Web\Togla.Web.csproj", "{EE5A510A-9330-4A89-A0E4-6A280CF7B6AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Togla.Services", "Togla.Services\Togla.Services.csproj", "{1E84ACF7-23A0-48D8-B197-ED8F40539AA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Togla.Services", "Togla.Services\Togla.Services.csproj", "{1E84ACF7-23A0-48D8-B197-ED8F40539AA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Togla.Tests", "Togla.Tests\Togla.Tests.csproj", "{9228AC46-9BC7-4391-9437-26A39885B2CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Togla.Tests", "Togla.Tests\Togla.Tests.csproj", "{9228AC46-9BC7-4391-9437-26A39885B2CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToglaDataImporter", "ToglaDataImporter\ToglaDataImporter.csproj", "{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D42D8CF8-D591-4451-B12B-2D359F763F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{9228AC46-9BC7-4391-9437-26A39885B2CB}.Release|x64.Build.0 = Release|Any CPU
 		{9228AC46-9BC7-4391-9437-26A39885B2CB}.Release|x86.ActiveCfg = Release|Any CPU
 		{9228AC46-9BC7-4391-9437-26A39885B2CB}.Release|x86.Build.0 = Release|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Debug|x64.Build.0 = Debug|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Debug|x86.Build.0 = Debug|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Release|x64.ActiveCfg = Release|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Release|x64.Build.0 = Release|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{201D844A-8E2F-4EF4-A848-9FA46CD7E7F0}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7DD93DD-F7A6-4355-A2EA-378D56DAA110}
 	EndGlobalSection
 EndGlobal
