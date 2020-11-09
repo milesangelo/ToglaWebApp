@@ -27,14 +27,14 @@ namespace Togla.Services
 		public void DeleteStock(int stockId)
 		{
 			var stock = _db.Stocks.Find(stockId);
-			if (stock != null)
+			if (stock == null)
 			{
-				_db.Remove(stock);
-				//_db.SaveChanges();
+				throw new InvalidOperationException(
+					$"Can't delete stock {stockId} because does not exist");				
 			}
 
-			throw new InvalidOperationException(
-				$"Can't delete stock {stockId} because does not exist");
+			_db.Remove(stock);
+			_db.SaveChanges();
 		}
 
 		public List<Stock> GetAllStocks()
