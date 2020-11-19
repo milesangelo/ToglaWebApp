@@ -3,8 +3,8 @@ Togla Market Data API Webapp
 
 Requirements:
 - .NET installed on local machine.
-- PostgreSQL and pgAdmin for managing back-end database.
-- IDE of choice! (visual studio - pc or Rider/VSCode - mac)
+- database provider of choice!  (thanks, EFCore!) (I am currently using PostgreSQL)
+- IDE/Text Editor of choice! (Visual Studio - pc or Rider/VSCode - mac)
 
 Projects include in solution:
 - Togla.Data
