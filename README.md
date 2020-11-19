@@ -9,9 +9,17 @@ Requirements:
 Projects include in solution:
 - Togla.Data
   Fundamental Database models
-- Togla.Services
-  Link between the database context and view controllers.
-- Togla.Web
-  Handles HTTP Requests/ API calls made to web service.
 - Togla.DataImporter
   Imports data into database using external methods.
+- Togla.Services
+  Link between the database context and view controllers.
+- Togla.Tests
+  Unit tests project.
+- Togla.Web
+  Handles HTTP Requests/ API calls made to web service.
+
+
+Roadmap
+
+- Ability to load historical market data (equity/options) into database using Togla.DataImporter
+  
