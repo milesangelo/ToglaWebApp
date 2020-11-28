@@ -6,8 +6,14 @@ using Togla.Data.Models;
 
 namespace Togla.Services
 {
+	/// <summary>
+	/// 
+	/// </summary>
     public class StockService : IStockService
     {
+	    /// <summary>
+	    /// 
+	    /// </summary>
 		private ToglaDbContext _db;
 
         /// <summary>
@@ -18,12 +24,21 @@ namespace Togla.Services
 			_db = db;
         }
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="stock"></param>
 		public void AddStock(Stock stock)
 		{
 			_db.Add(stock);
 			_db.SaveChanges();
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="stockId"></param>
+		/// <exception cref="InvalidOperationException"></exception>
 		public void DeleteStock(int stockId)
 		{
 			var stock = _db.Stocks.Find(stockId);
@@ -32,16 +47,25 @@ namespace Togla.Services
 				throw new InvalidOperationException(
 					$"Can't delete stock {stockId} because does not exist");				
 			}
-
+			
 			_db.Remove(stock);
 			_db.SaveChanges();
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
 		public List<Stock> GetAllStocks()
 		{
 			return _db.Stocks.ToList();
 		}
-
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="stockId"></param>
+		/// <returns></returns>
 		public Stock GetStock(int stockId)
 		{
 			var stock = _db.Stocks.First(stock => stock.Id == stockId);
