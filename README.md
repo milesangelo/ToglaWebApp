@@ -21,5 +21,5 @@ Projects include in solution:
 
 Roadmap
 
-- Ability to load historical market data (equity/options) into database using Togla.DataImporter
+- ~~Ability to load historical market data (equity/options) into database using Togla.DataImporter~~ 
   
