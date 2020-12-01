@@ -22,4 +22,4 @@ Projects include in solution:
 Roadmap
 
 - ~~Ability to load historical market data (equity/options) into database using Togla.DataImporter~~ 
-  
+- Creating a react frontend for users to login and run backtests, and view historical market data graphically.
